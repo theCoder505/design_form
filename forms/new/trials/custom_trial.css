@@ -1,0 +1,219 @@
+::placeholder {
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+.tHead {
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0);
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1270px;
+    }
+}
+
+.main-logo {
+    width: 190px;
+    height: 120px;
+}
+
+@media (max-width: 500px) {
+    .main-logo {
+        width: 160px;
+        height: 90px;
+    }
+}
+
+.btn-language button,
+#nextBtn {
+    border: none;
+    outline: none;
+    background-color: #125f8f;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .btn-language button {
+        padding: 5px 8px;
+    }
+}
+
+.btn-language button:hover {
+    background-color: #1c8ace;
+}
+
+#nextBtn:hover {
+    background-color: #1c8ace;
+}
+
+.invalid {
+    background-color: #ffdddd;
+}
+
+.thead {
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0)";
+
+}
+
+#testDiv {
+    background-color: #212529;
+    text-align: center;
+    color: red;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+
+/* Make circles that indicate the steps of the form: */
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+#prevBtn:hover {
+    background: #4286f4;
+}
+
+
+/* Mark the steps that are finished and valid: */
+
+.step.finish {
+    background-color: #4286f4;
+}
+
+table,
+td {
+    border: 1px solid;
+    padding: 0;
+    margin: 0;
+}
+
+.border-dark {
+    border-color: #212529 !important;
+}
+
+@media (max-width: 768px) {
+    /* .table-style thead,
+    .table-style tbody .table-style thead th,
+    .table-style tr,
+    .table-style td {
+        display: block;
+        width: 100% !important;
+    } */
+    .table-style thead,
+    .table-style tbody,
+    .table-style th,
+    .table-style tr,
+    .table-style td {
+        border-top: 0.5 px solid;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+
+/* .table {
+    border: 2px solid black;
+} */
+
+
+/* ------------------------------ */
+
+input {
+    width: 100%;
+    padding-left: 12px;
+    border: none;
+    outline: none;
+}
+
+.specInput,
+#physicalVerification,
+#electricVerification,
+#policeInformation,
+#other,
+.specInput,
+#male {
+    width: auto;
+}
+
+.specFloat {
+    left: 25%;
+    position: relative;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+        -moz-print-color-adjust: exact !important;
+    }
+    table {
+        border: 2px solid black;
+    }
+    table,
+    td {
+        border: 2px solid black;
+    }
+    #specPrintBtmLine input {
+        border-bottom-color: black;
+        border-bottom: 2px solid black!important;
+    }
+    .printMt {
+        margin-top: 200px;
+    }
+    .col-md-6 {
+        width: 100%;
+    }
+    #header,
+    #lastDiv {
+        display: none;
+    }
+    .printSpace {
+        margin-top: 100px;
+    }
+}

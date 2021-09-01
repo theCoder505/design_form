@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        #testDiv {
+            width: 1200px;
+            margin: 30px auto;
+            border: 5px solid red;
+            padding: 100px 10px;
+            display: inline-flex;
+        }
+        
+        .surNameInput {
+            width: 100%;
+        }
+        
+        #secondInputDiv {
+            width: 1000px;
+            margin-top: 50px;
+            border: 5px solid black;
+            padding: 30px;
+            display: inline-flex;
+        }
+        
+        #inpField {
+            width: 100%;
+        }
+        
+        #divRoot {
+            background-color: black;
+            margin: 25px;
+            padding: 40px;
+            border: 1px solid red;
+            color: white;
+        }
+        
+        #div1,
+        #div2 {
+            border: 2px solid white;
+            width: 200px;
+            display: inline;
+        }
+    </style>
+    <title>Trials</title>
+</head>
+
+<body>
+
+
+    <div id="testDiv">
+
+        <label for="surName">Surname (last name)<span>:</span></label>
+        <input class="surNameInput" type="text" name="surName" oninput="this.className = ''" required="" />
+
+    </div>
+
+
+    <div id="secondInputDiv">
+        <label for="name">Your Name (Check this field): </label>
+        <div id="inpDiv">
+            <input type="text" id="inpField">
+        </div>
+    </div>
+
+    <div style="display: flex; margin-left: 12px;">
+        <label>Sex (check one): </label>
+        <div class="specFloat">
+            <input class="specInput" type="radio" value="female" name="gender" />
+            <label for="female"><span>Female</span></label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="male" id="male" name="gender" class="specInput" oninput="this.className = ''" required="" />
+            <label for="male"><span>Male</span></label>
+        </div>
+    </div>
+
+
+
+    <table border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+        </tr>
+        <tr>
+            <td colspan="1">Row 1 Cell 11</td>
+            <td colspan="1">Row 1 Cell 11</td>
+        </tr>
+        <tr>
+            <td colspan="1">Row 1 Cell 1</td>
+            <td colspan="1">Row 1 Cell 1</td>
+            <td colspan="1">Row 1 Cell 1</td>
+        </tr>
+    </table>
+
+
+
+    <div id="divRoot">
+        <div id="div1">
+            Holla
+        </div>
+        <div id="div2">
+            holla2
+            <input type="text" style="width: 100%;">
+        </div>
+    </div>
+
+
+    <div class="txt">
+        holla golla molla:
+    </div>
+    <div id="inputField">
+
+        <input type="text" style="width: 100%;">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <script>
+        function printForm() {
+            printJS({
+                printable: 'tableForm',
+                type: 'html',
+                targetStyles: ['*'],
+                header: 'Print JS Library'
+            });
+        }
+    </script>
+</body>
+
+</html>

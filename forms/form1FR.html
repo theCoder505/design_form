@@ -1,0 +1,620 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="AdsBot-Google" content="noindex" />
+    <title>Employee Forms</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/style.css" >
+</head>
+    <body>
+	  <header id="header"><!-- fixed header menu -->
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-6">
+                    <a href="#">
+						<div class="logo">
+                            <img src="../assets/img/logo-cbs.png" alt="CBS logo">
+						</div>
+                    </a>
+                </div><!-- / end .col-md-6 -->
+				<div class="col-md-6">
+				<div class="btn-language">
+					<button onclick="window.location.href='form1.php'">English </button>
+					<button onClick="window.print()">Imprimer</button>
+					<button onclick="window.location.href='../logout.php'">DÉCONNECTER</button>
+				</div>
+					</div>
+            </div><!-- / end .row -->
+        </div><!-- / end .container -->
+	  </header><!-- / end header -->	
+      <form method="post" autocomplete='off' action="" id="regForm" onsubmit="validate()">
+		<div class="tab testbox">
+		  <div id="form1">
+			<section>				
+			  <div class="banner">
+				  <img src="../assets/img/logo-mintz.jpg" alt="logo">
+				<h1>Mintz Global Screening Form</h1>
+			  </div>
+			  <p>Veuillez remplir les informations demandées ci-dessous et passer au formulaire suivant. <span class="error">* champs requis</span></p>
+			  <hr/>
+			  <fieldset>
+				<legend>A. Renseignements</legend>
+				   <div class="colums">
+					  <div class="item">
+						<label for="surName"> Nom de famille <span>*</span></label>
+						<input type="text" name="surName" class="form-control" oninput="this.className = ''" required=""/> 
+					  </div>
+					  <div class="item">
+						<label for="givenName">Prênom(s) <span>*</span></label>
+						<input type="text" name="givenName" class="form-control" oninput="this.className = ''" required=""/>
+					  </div>
+					  <div class="item">
+						<label for="birthName">Nom de famille â la naissance <span>*</span></label>
+						<input id="birthName" type="text" name="birthName" class="form-control" oninput="this.className = ''" required="" />
+					  </div>
+					  <div class="item">
+						<label for="formerName">Nom(s) antêrieur(s) <span>*</span></label>
+						<input id="formerName" type="text" name="formerName" class="form-control" oninput="this.className = ''" required="" />
+					  </div>
+					</div>
+					<div class="item">
+					  <label for="dob">Date de naissance (AAAA -MM -JJ) <span>*</span></label>
+					  <input id="dob" type="date" data-date-inline-picker="true" name="dob" class="form-control" oninput="this.className = ''" required="" />
+					  <i class="fas fa-calendar-alt"></i>
+					</div> 
+					<div class="item ">
+						<label>Sexe (cocher une case) <span>*</span></label>
+						<div class="status">
+							<div class="status-item">
+								<input type="radio" value="male" id="male" name="gender" class="form-control" oninput="this.className = ''" required="" />
+								<label for="male"><span>Homme</span></label>
+								<input  type="radio" value="female" id="female" name="gender" />
+								<label for="female"><span>Femme</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="colums">
+					  <div class="item">
+						<label for="email">Adresse courriel <span>*</span></label>
+						<input id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" oninput="this.className = ''" required=""/>
+					  </div>
+					  <div class="item">
+						<label for="phone"> Numéro(s) de telephone <span>*</span></label>
+						<input type="tel" id="phone" name="phone" pattern="^\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})" class="form-control" oninput="this.className = ''" required=""/>
+					  </div>
+					</div>
+				  </fieldset>
+				  <fieldset>
+					<legend> Adresse de la résidence actuelle</legend>  
+					  <div class="item">
+						<label for="address">Numéro / Rue / Appartement <span>*</span></label>
+						<input id="address" type="text" name="address"  class="form-control" oninput="this.className = ''" required="" />
+					  </div>
+					  <div class="colums">
+						<div class="item">
+							<label for="city">Ville <span>*</span></label>
+							<input type="text" name="city" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+						<div class="item">
+							<label for="province">Province<span>*</span></label>
+							<input id="province" type="text"  name="province" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+						<div class="item">
+							<label for="zip">Code Postal <span>*</span></label>
+							<input id="zip" type="text"  name="zip" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+						<div class="item">
+							<label for="country">Pays<span>*</span></label>
+							<input id="country" type="text"   name="country" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+					</div>
+				  </fieldset>
+				  <fieldset>
+					<legend> Adresse(s) précédente(s) <b>(écrire NA dans tous les champs si non applicable)</b></legend> 
+					  <div class="item">
+						<label for="previousaddress">Numéro / Rue / Appartement <span>*</span></label>
+						<input id="previousaddress" type="text" name="previousaddress"  class="form-control" oninput="this.className = ''" required="" />
+					  </div>
+					  <div class="colums">
+						<div class="item">
+							<label for="previouscity">Ville <span>*</span></label>
+							<input type="text" name="previouscity" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+						<div class="item">
+							<label for="previousprovince">Province <span>*</span></label>
+							<input id="previousprovince" type="text"  name="previousprovince" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+						<div class="item">
+							<label for="previouszip">Code Postal <span>*</span></label>
+							<input id="previouszip" type="text"  name="previouszip" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+						<div class="item">
+							<label for="previouscountry">Pays <span>*</span></label>
+							<input id="previouscountry" type="text"   name="previouscountry" class="form-control" oninput="this.className = ''" required="" />
+						</div>
+					  </div>
+				   </fieldset>
+				   <br/>
+				   <fieldset>
+					  <legend>B.  Raison de la vérification de casier Judiciaire</legend>
+					  <div class="item">
+					   <!--<input id="reasonRequest" type="text" name="text" placeholder="Reason for request due diligence" />-->
+						  <h6> Raison de la demande: Vérification diligente</h6>
+					  </div>
+					  <div class="item">
+						<!--<input id="eVerifile" type="text" name="text" placeholder="Organization requesting search: eVerifile" />-->
+						  <h6>Organisme qui demande la vérification: eVerlflle</h6>
+					  </div>
+					  <div class="item">
+						<div class="name-item">
+						  <div>
+							<!--<input type="text" name="text" placeholder="Contact name: Dayna Milzowek" />-->
+							  <h6> Personne ressource: Dayna Mizowek</h6>
+						  </div>
+						  <div>
+							<!--<input type="text" name="text" placeholder="Contact phone number: 727.937.7441" />-->
+							  <h6> Numéro de t éléphone: 727.937.7441</h6>
+						  </div>
+						</div>
+					  </div>
+					</fieldset>
+					<br/>
+					<fieldset>
+						<legend>C.  Consentement éclairé</legend>
+						<div class="item">
+							<h6><strong>AUTORISATION À EFFECTUER UNE RECHERCHE</strong> -  JE CONSENS PAR LA PRÉSENTE À CE QU'UNE RECHERCHE SOIT EFFECTUÉE dans le Répertoire national des casiers judiciaires de la GRC à partir du ou des noms, de la date de naissance et, le cas échéant, des antécédents judiciaires que j'ai fournis. Je comprends que cette vérification ne sera pas confirmée par comparaison  d'empreintes  digitales, ce  qui  constitue l'unique moyen  de confirmer  formellement  l'existence  d'un casier  judiciaire  dans le Répertoire national des casiers judiciaires.</h6>
+						</div>
+						<div class="item">
+							<h6><strong> SYSTÈME(S) D'INFORMATION DE LA POUCE</strong> -  JE CONSENS PAR LA PRÉSENTE À CE QU'UNE RECHERCHE SOIT EFFECTUÉE dans les systèmes d'information suivants de la police : (cocher les cases qui s'appliquent) 
+								<div class="status-item">
+									<span class="testIcon"><i class="fa fa-circle"></i> Banque de données d'enquêtes du CPIC</span>
+									<span class="testIcon"><i class="fa fa-circle-notch"></i> Portail d'informations policières (PIP)</span>
+									<span class="testIcon"><i class="fa fa-circle-notch"></i>Autre</span>
+								</div>
+							</h6>
+						</div>
+						<div class="item">
+							<h6><strong>AUTH0RISATION ET DÉCHARGE</strong> en vue de la transmission d'une attestation de casier judiciaire ou de toute information de la police.<br/><br/>
+								J'atteste que les renseignements que j'ai fournis dans la présente demande sont, à ma connaissance, exacts. Je consens à ce que les résultats des vérifications de casier judiciaire soit communiqués à Vérifications mondiales <u>Mintz & eVerifile</u>, situé(e) à <u>Montréal, Canada &, Smyrna Georgia, USA</u>.
+								Par la présente, je libère à jamais tous les membres et employés du service de police chargé de traiter la demande ainsi que ceux de la Gendarmerie royale du Canada de toute action ou demande relative à tout dommage, toute perte ou tout préjudice, quelle qu'en soit la cause, que je pourrais subir par suite de la communication de l'information par <strong>Cobourg Police Service</strong> à Vérifications mondiales Mintz & eVerifile, Montréal, Canada & Smyrna Géorgie, É.-U.
+							</h6>
+						</div>
+						<div class="item">
+							<div class="sign-item">
+							  <div>
+								  <label for="signature">Signature du demandeur <span>*</span></label>
+								  <input id="signature" type="text" name="signature" class="form-control" oninput="this.className = ''" required="" />
+							  </div>
+							  <div>
+								  <label for="date">Date (AAAA-MM-JJ) <span>*</span></label>
+								  <input id="date" type="date" name="date"  class="form-control" oninput="this.className = ''" required=""/> 
+							  </div>
+							  <div>
+								  <label for="location">Signé à (Ville, Province) <span>*</span></label>
+								  <input id="location" type="text" name="location" class="form-control" oninput="this.className = ''" required=""/>
+							  </div>
+							</div><br/><br/>
+						 </div>
+					</fieldset>
+					<br/>
+					<fieldset>
+					  <legend>D. Vérification d'identité
+						<span class="legendIcon" style="font-size: 14px;"><i class="fa fa-circle-notch"></i>Vérification physique de l'identité</span>
+						<span class="legendIcon" style="font-size: 14px;"><i class="fa fa-circle-notch"></i>Vérification électronique de l'identité</span>
+					  </legend>
+					  <div class="item">
+						<div class="name-item">
+						  <div>
+							  <h6>Nom du mandataire témoin: Gerry Papayanatos</h6>
+						  </div>
+						  <div>
+							  <h6>Identité vérifiée: Oui</h6>
+						  </div>
+						</div>
+					  </div>
+					  <div class="item">
+						<div class="name-item">
+						  <div>
+							  <h6>Signature du mandataire témoin:</h6>
+						  </div>
+						  <div>
+							  <h6>Type de pièce d'identité avec photo vérifiée (Pièce d'identité dêlivrée par le gouvernement) et pièce d'identite secondaire</h6>
+						  </div>
+						</div>
+					  </div>
+					</fieldset>
+					<p>Nom et lieu de l'entreprise qui conservera l' information   au canada: Vérifications mondiales Mlntz, Montréal, Québec</p>
+					<p><strong>** Information relative à cette vérification de casier Judiciaire est recueillie, conservée et communiquée conformément aux lois applicables en matière de protection des renseignements personnels.**</strong></p>
+				</section>	
+			  
+			  <section>
+			  	<h4>VÉRIFICATION DE CASIER JUDICIAIRE<br/>
+				  	Formulaire de déclaration d'antécédents judiciaires</h4>
+			  	<h2><strong>Déclaration d'antécédents judiciaires</strong></h2>
+				  <p><em>Vous devez remplir le présent formulaire et le joindre au Formulaire de consentement éclairé à une vérification de casier judiciaire.</em></p>
+			  	<div class="item">
+					<div class="sign-item">
+					  <div>
+						  <label for="surname1">Nom de famille <span>*</span></label>
+						  <input id="surname1" type="text" name="surname1" class="form-control" oninput="this.className = ''" required=""/>
+					  </div>
+					  <div>
+						  <label for="givenname1">Prénom(s) <span>*</span></label>
+						  <input id="givenname1" type="text" name="givenname1" class="form-control" oninput="this.className = ''" required=""/>
+					  </div>
+					  <div>
+						  <label for="bday">Date de naissance (AAAA-MM-JJ)<span>*</span></label>
+						  <input id="bday"  name="bday" class="form-control" type="date"  data-date-inline-picker="true" oninput="this.className = ''" required=""/>
+					  </div>
+					</div>
+				  </div><br/>
+				  <p>L'information est recueillie et communiquée en conformité avec les lois fédérales et provinciales et avec les règlements municipaux.</p>
+				  <p>La déclaration d'antécédents judiciaires ne constitue pas un casier judiciaire certifié par la GRC et ne peut pas contenir toutes les déclarations de culpabilité au criminel.</p>
+				  <p>Le demandeur doit déclarer toute déclaration de culpabilité relative à une infraction à une loi fédérate du Canada.</p>
+				  <p><strong><u>À ne pas déclarer:</u></strong></p>
+				  <ul><li>Déclarations de culpabilité pour lesquelles vous avez obtenu une suspension de casier (autrefois appelée réhabilitation) en vertu de la <em>Loi sur le casier judidaire</em>;</li>
+				  	  <li>Déclarations de culpabilité dont vous avez fait l'objet alors que vous étiez adolescent(e) au sens de la <em>Loi sur le système de
+						justice pénale pour les adolescents</em>;</li>
+					  <li>Absolutions inconditionnelles ou sous conditions accordées aux termes de l'article 730 du <em>Code criminel</em>;</li>
+					  <li>Infractions dont vous n'avez pas été reconnu(e) coupable;</li>
+					  <li>Infractions à une loi provinciale ou à un règlement municipal;</li>
+					  <li>Accusations portées à l'extérieur du Canada.</li>
+				  </ul>
+				  <p><strong>A noter qu'un casier judiciaire certifié ne peut être délivré que si des empreintes digitales ont été transmises au Répertoire national des casiers judiciaires de la GRC.</strong></p>
+				  <div class="item">
+					<div class="sign-item">
+					  <div>
+						  <label for="offence">Infraction <b>(écrire NA dans tous les champs si non applicable)</b></label>
+					  </div>
+					  <div>
+						  <label for="sentence">Date du prononcé de la peine <b>(écrire NA dans tous les champs si non applicable)</b></label>
+						  
+					  </div>
+					  <div>
+						  <label for="court">Lieu du tribunal <b>(écrire NA dans tous les champs si non applicable)</b></label>
+					  </div>
+					  <div>
+						  <input type="text" name="offence" placeholder="Infraction" />
+					  </div>
+					  <div>
+						  <input type="text" name="sentence" placeholder="Date du prononcé de la peine"/>
+					  </div>
+					  <div>
+						  <input type="text" name="court" placeholder="Lieu du tribunal" />
+					  </div>
+					   <div>
+						  <input type="text" name="offence2" placeholder="Infraction" />
+					  </div>
+					  <div>
+						  <input type="text" name="sentence1" placeholder="Date du prononcé de la peine"/>
+					  </div>
+					  <div>
+						  <input type="text" name="court2" placeholder="Lieu du tribunal" />
+					  </div>
+					  <div>
+						  <input type="text" name="offence3" placeholder="Infraction" />
+					  </div>
+					  <div>
+						  <input type="text" name="sentence3" placeholder="Date du prononcé de la peine"/>
+					  </div>
+					  <div>
+						  <input type="text" name="court3" placeholder="Lieu du tribunal" />
+					  </div>
+					  <div>
+						  <input type="text" name="offence4" placeholder="Infraction" />
+					  </div>
+					  <div>
+						  <input type="text" name="sentence4" placeholder="Date du prononcé de la peine"/>
+					  </div>
+					  <div>
+						  <input type="text" name="court4" placeholder="Lieu du tribunal" />
+					  </div>	
+					</div>
+				  </div><br/><br/>
+				  <div class="colums">
+					<div class="item">
+						<label for="signature2">Signature du demandeur <span>*</span></label>
+						<input id="signature2" type="text" name="signature2"  class="form-control" oninput="this.className = ''" required="" />
+					</div>
+					<div class="item">
+						<label for="date2">Date (AAAA-MM-JJ)<span>*</span></label>
+						<input id="date2" name="date2" type="date"  class="form-control" oninput="this.className = ''" required=""/>
+					</div>
+				  </div>
+				  <br/>
+				  <div class="item">
+					<div class="name-item">
+						<div>
+							<label for="verification">Vérifié par:</label>
+					  		<h6>Nom de l'employé(e) du Service de Police:</h6>
+							<h6>Signature de l'employé(e) du Service de Police</h6>
+				  		</div>
+					</div>
+			  	</div>
+			  </section>
+				
+				  
+			  <section>
+				  <h2><strong>VÉRIFICATION DE CASIER JUDICIAIRE PROVINCIAL</strong><br/>
+				  Formulaire de consentement éclairé</h2>
+				  <div class="colums">
+					<div class="item">
+						<label for="LastName">Nom de famille <span>*</span></label>
+						<input id="LastName" type="text" name="LastName" class="form-control" oninput="this.className = ''" required=""/>
+					</div>
+					<div class="item">
+						<label for="FirstName">Prénom <span>*</span></label>
+						<input id="FirstName" type="text" name="FirstName" class="form-control" oninput="this.className = ''" required=""/>
+					</div>
+				  </div>
+				  <hr/>
+				  <ul><li>J'autorise Mintz à obtenir à mon sujet et au sujet de toute mesure m'impliquant ou m'ayant impliqué auprès de toute cour provinciale ou fédérale, tout tribunal, tout organisme de contrôle, tout comité disciplinaire et toute autre instance judiciaire ou quasi judiciaire au Canada.</li></ul>
+				  <hr/>
+				  <p><strong>RENONCIATION</strong><br/>
+					  <u>Objet du consentement: Vérification d'antécédents pour !'Entreprise</u>
+				  </p>
+				  <p>Je comprends que les renseignements obtenus à la suite de la  présente autorisation  seront traités de manière strictement confidentielle par  Mintz et L'Entreprise et seront conservés conformément à leurs politiques de confidentialité respectives. Les renseignements obtenus seront utilisés uniquement aux fins décrites dans la présente autorisation. Par la présente, j'accepte de décharger toute personne qui fournit des renseignements à la suite de la présente renonciation de toute responsabilité relative à la divulgation d'information à Mintz et à L'Entreprise. J'atteste la véracité et l'exactitude des renseignements que j'ai fournis dans la présente autorisation. Avant de signer la présente autorisation, je me suis pleinement informé de son contenu et de sa signification, et je confirme en avoir une parfaite comprehension.</p>
+				  <div class="colums">
+					<div class="item">
+						<label for="signature3">Signature<span>*</span></label>
+						<input id="signature3" type="text" name="signature3"  class="form-control" oninput="this.className = ''" required="" />
+					</div>
+					<div class="item">
+						<label for="date3">Date (AAAA-MM-JJ)<span>*</span></label>
+						<input id="date3" type="date"  name="date3"  class="form-control" oninput="this.className = ''" required=""/>
+					</div>
+				  </div>
+			  </section>
+
+			  
+			  <section>
+				  <p><strong>VÉRIFICATION D'IDENTITÉ</strong></p>
+				  <p>Tout candidat doit présenter ses pièces d'identité avant qu'une recherche de casier judiciaire faite à partir de son nom puisse être effectuée. Une copie lisible des pièces d'identité doit être fournie avec le formulaire de consentement.</p>
+				  <p>Le candidat doit fournir la copie de deux pièces d'identité, dont une doit être émise par le gouvernement et  comprendre le nom du candidat, sa date de naissance, sa signature et sa photo. Les copies des documents d'identité doivent être validées par un témoin qui doit confirmer que la personne qui signe le formulaire de consentement est bien la personne détentrice de la pièce d'identité émise par le gouvernement. Le témoin qui vérifie l'identité du candidat doit comparer la signature qui apparait sur la pièce d'identité émise par le gouvernement à la signature sur le formulaire de consentement.</p>
+				  <div class="row">
+					  <div class="column">
+						<p><strong>PIÈCE D'IDENTITÉ PHOTO</strong><br/>
+						  Une des pièces d'identité suivantes doit obligatoirement être fournie avec la demande:</p>
+						<ul><li>Permis de conduire (émis par une province ou un territoire canadien) ou carte Nexus</li>
+						  <li>Permis de conduire d'un autre pays</li>
+						  <li>Carte d'assurance-maladie avec photo (sauf en Ontario, au Manitoba ou à l'Île-du-Prince­ Édouard)</li>
+						  <li>Passeport canadien</li>
+						  <li>Passeport d'un autre pays</li>
+						  <li>Carte de citoyenneté canadienne</li>
+						  <li>Carte de résident permanent (CRP)</li>
+						  <li>Certificat de statut d'indien</li>
+						  <li>Autorisation d'acquisition d'armes à feu (AAAF)</li>
+						  <li>Carte d'identité fédérale, provinciale ou municipale</li>
+						  <li>Carte d'identité de famille de militaires (CIFM)</li>
+						 </ul>
+					  </div>
+					  <div class="column">
+						<p><strong>PIÈCE D'IDENTITÉ SECONDAIRE</strong><br/>
+						  La deuxième pièce d'identité fournie peut provenir de la liste précédente ou être l'une des pièces suivantes:</p>
+						<ul><li>Certificat de naissance</li>
+						  <li>Certificat de baptême</li>
+						  <li>Permis de chasse</li>
+						  <li>Permis de pêche</li>
+						  <li>Carte plein-air</li>
+						  <li>Carte d'hôpital</li>
+						  <li>Documents d'immigration</li>
+						  <li>Carte de donneur de sang émise par la Société canadienne du sang (à condition que la date de naissance y figure)</li>
+						  <li>Carte d'étudiant (à condition que le nom y soit indiqué)</li>
+						 </ul>
+					  </div>
+				  </div>
+				  
+				  
+				  
+				  <p><strong>INSTRUCTIONS POUR LE TÉMOIN</strong><br/>
+				  Le témoin doit personnellement vérifier les pièces d'identité fournies par le candidat et s'assurer qu'elles appartiennent bien à la personne qui signe le formulaire de consentement. Le témoin pourrait être contacté dans le cadre d'une vérification de cette procédure afin de confirmer qu'il a bien effectué la vérification.</p>
+				  <p>Le témoin doit répondre à l'une des exigences suivantes:</p>
+				  <ul><li>Être un employé de l'entreprise qui demande la vérification</li>
+					<li>Être un commissaire à l'assermentation dûment autorisé et certifié</li>
+					<li>Être un témoin indépendant. Un témoin indépendant doit être une personne qui n'est pas liée au candidat par alliance, par un lien familial ou par une relation intime. Le témoin doit être âgé d'au moins 18 ans et connaître personnellement le candidat depuis au moins deux ans. Connaître le candidat implique que le témoin peut confirmer certaines caractéristiques personnelles du candidat, telles que son nom, son âge approximatif, le lieu de sa naissance, sa description physique et une partie de son historique personnel.</li>
+				  </ul><br/><br/>
+				  <p><strong><u> Note au candidat:</u></strong> Vous pouvel demander l'accès à vos renseignements personnels, demander une correction des renseignements ou soumettre toute autre demande en faisant parvenir votre demande par écrit à Vérifications mondiales Mintz à l'adresse : 1303, rue Wilflam, bureau 200, Montréal, QC, H3C 1R4, aux soins du responsable de la protection de la vie privée. Mintz répondra à votre demande d'accès, de correction ou d'information dans un délai de trente (30) jours suivant sa réception.</p>
+			  </section>
+			  <section>
+				  <p><strong>INSTRUCTIONS- DÉCLARATION DE CASIER JUDICIAIRE</strong></p>
+				  <p>Préalablement à ce qu'une vérification de casier judiciaire à partir de votre nom soit faite, il vous est possible de déclarer volontairement le contenu de votre casier judiciaire à l'aide du formulaire suivant Les services de police compareront les renseignements fournis à ceux figurant à leur base de données et détermineront si la déclaration est:</p>
+				  <ul><li><strong>Complète:</strong> les renseignements fournis sont exacts et il n'y a pas d'autres condamnations pour acte criminel dans votre casier judiciaire, ou le service de police juge que votre déclaration est une représentation fidèle de vos antécédents criminels.</li>
+				  	<li><strong>Incomplète:</strong> les renseignements fournis sont erronés ou il manque des condamnations pour acte criminel qui figurent dans votre casier judiciaire.</li>
+				  </ul>
+				  <p>La confirmation d'une déclaration de casier judiciaire ne constitue pas une vérification certifiée de casier judiciaire par la GRC/ RCMP. Seule une vérification à partir de vos empreintes digitales permet d'obtenir une copie certifiée de votre casier judiciaire. De plus, la confirmation d'une déclaration de casier judiciaire peut ne pas révéler toutes les condamnations pour une infraction criminelle du sujet de la recherche.</p>
+				  <p><strong>PROCÉDURE</strong></p>
+				  <ol>
+					  <li>Dans le formulaire de déclaration à la page suivant, veuillez inscrire votre nom et votre date de naissance exactement comme ils sont inscrits dans votre formulation de consentement.</li>
+					<li>Veuillez déclarer une condamnation pour acte criminel par ligne. Si vous avez été condamné pour plusieurs chefs d'accusation lors d'une même séance, veuillez utiliser une ligne pour chaque chef d'accusation.</li>
+					<li>Indiquez l'infraction commise, la date de condamnation et l'emplacement de la cour où la condamnation a été prononcée.</li>
+				  </ol>
+				  <p><strong>DÉCLARER LES ANTÉCÉDENTS SUIVANTS:</strong></p>
+				  <ul><li>Toutes les condamnations pour un acte criminel en vertu de la loi fédérale.</li></ul>
+				  <p><strong>NE PAS DÉCLARER LES ANTtCÉDENTS SUIVANTS:</strong></p>
+				  <ul><li>Les absolutions conditionnelles ou inconditionnelles en vertu de la section 730 du Code criminel.</li>
+					<li>Les condamnations pour lesquelles vous avez obtenu une suspension de casier judiciaire(« pardon ») en vertu de la Loi sur le casier judiciaire.</li>
+					<li>Toute infraction commise alors que vous étiez "adolescent" (au moins 12 ans, mais pas atteint l'âge de dix-huit ans) en vertu de la Loi sur le système de justice pénale pour les adolescents.</li>
+					<li>Toute accusation criminelle qui n'a pas donné lieu à une condamnation, par exemple toute accusation retirée, rejetée, etc.</li>
+					<li>Toute infraction provinciale ou municipale.</li>
+					<li>Toute condamnation survenue hors du Canada.</li>
+					<li>Les accusations qui ont fait l'objet d'une suspension des procédures.</li>
+				  </ul>
+			  </section>
+				
+	  </div>
+	</div>		
+		  
+		  
+		  
+			  <!-- Circles which indicates the steps of the form: -->
+			<div style="text-align:center;margin-top:40px;">
+				<button type="button" id="prevBtn" onclick="nextPrev(-1)">&lt Précédente</button>
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+				<button type="submit" id="nextBtn" onclick="nextPrev(1)" style="width:auto;">Suivante</button>
+			</div>
+				
+	</form>	  
+		  
+	<script src="../vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
+	  
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Soumettre";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Suivante &gt";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+	
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  var formData = validateForm();
+  if (n == 1 && !formData) return false;
+
+  if(n== 1){
+	formData.append('step', currentTab);
+
+	$.ajax({
+		url: 'form1save.php',
+		data: formData,
+		type: 'POST',
+		contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+		processData: false, // NEEDED, DON'T OMIT THIS
+		success: function(){
+
+			beforeShowTab(n, x);
+
+		},
+		error: function () {
+			alert('Error: could not save the form, please try again.');
+		}
+	});
+  }else{
+	beforeShowTab(n, x);
+  }
+
+}
+
+function beforeShowTab(n, x){
+	// mark the step as finished and valid:
+	document.getElementsByClassName("step")[currentTab].className += " finish";
+	// Hide the current tab:
+	x[currentTab].style.display = "none";
+	// Increase or decrease the current tab by 1:
+	currentTab = currentTab + n;
+	//   // if you have reached the end of the form...
+	if (currentTab >= x.length) {
+		alert('Form successfully submitted');
+		window.location.href = "/cbs-forms/";
+		return false;
+	}
+	// Otherwise, display the correct tab:
+	showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  var formData = new FormData();
+  for (i = 0; i < y.length; i++) {
+
+	if(y[i].type!="file"){
+		if (y[i].value == "") {
+			y[i].className += " invalid";
+			valid = false;
+		}
+		if(y[i].type =="radio"){
+			if(!formData.has(y[i].name)){
+				formData.append(y[i].name, $(x[currentTab]).find("input[name="+y[i].name+"]:checked").val());
+			}
+		}else{
+			formData.append(y[i].name, y[i].value);
+		}
+	}else{
+		if(!y[i].classList.contains('hideFile')){
+			if (y[i].value == "") {
+				y[i].className += " invalid";
+				valid = false;
+			}else{
+				formData.append(y[i].name, y[i].files[0], y[i].files[0].name);
+			}
+		}
+	}
+  }
+ 
+  return valid? formData: null; // return the data if valid
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+	
+
+function changeImg(name){
+	var inp = $('input[name="'+name+'"]');
+	inp.eq(0).removeClass('hideFile');
+
+}
+
+function setData(data) {
+	for(let key of Object.keys(data)){
+		var inp = $('input[name="'+key+'"]');
+		if(inp.length>0){
+			var inpType = inp.eq(0).attr('type');
+			switch (inpType) {
+				case "radio":
+					$("input[name='"+key+"'][value=" + data[key] + "]").prop('checked', true);
+					break;
+				case "file":
+					inp.eq(0).addClass('hideFile');
+					inp.eq(0).next().children('img').eq(0).prop('src', '../uploads/form1/' + data[key]);
+				break;
+				default:
+					inp.val(data[key]);
+					break;
+			}
+			
+		}
+	}
+}
+
+var userData = null;
+
+
+</script>
+  </body>
+</html>
